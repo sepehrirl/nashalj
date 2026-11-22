@@ -11,7 +11,7 @@
   "theme_color": "#172d24",
   "icons": [
     {
-      "src": "/assets/nashalj-mark.svg",
+      "src": "./assets/nashalj-mark.svg",
       "sizes": "any",
       "type": "image/svg+xml",
       "purpose": "any"
