@@ -16,6 +16,7 @@
       if (label) label.textContent = dark ? "حالت روشن" : "حالت تیره";
     }
     if (themeMeta) themeMeta.setAttribute("content", dark ? "#121a16" : "#172d24");
+    document.documentElement.style.colorScheme = dark ? "dark" : "light";
   };
   applyTheme(storedTheme || (systemDark ? "dark" : "light"));
   if (themeButton) themeButton.addEventListener("click", () => {
@@ -53,7 +54,7 @@
   window.addEventListener("scroll", updateHeader, { passive: true });
 
   const revealTargets = document.querySelectorAll(
-    ".section-copy,.section-heading,.heritage-card,.heritage-footnote,.facts-grid>div,.culture-heading,.culture-list article,.craft-visual,.visit-notes>div,.archive-grid>div,.sources-wrap>div,.story-visual"
+    ".section-copy,.section-heading,.heritage-card,.heritage-footnote,.facts-grid>div,.culture-heading,.culture-list article,.craft-visual,.visit-notes>div,.sources-wrap>div,.story-visual"
   );
   revealTargets.forEach((element, index) => {
     element.classList.add("js-reveal");
