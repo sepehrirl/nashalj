@@ -8,7 +8,7 @@
 - ساختار معنایی HTML، دسترس‌پذیری پایه و پشتیبانی از کاهش حرکت
 - فراداده‌های SEO و Open Graph، فایل manifest، robots و sitemap
 - ناوبری موبایل و اسکریپت کوچک بدون کتابخانه
-- آماده میزبانی روی Cloudflare Pages یا هر میزبان فایل استاتیک
+- آماده انتشار مستقیم از ریشه مخزن با GitHub Pages
 
 ## اجرای محلی
 فایل `index.html` را باز کنید یا از یک سرور استاتیک ساده استفاده کنید:
@@ -26,12 +26,18 @@ python -m http.server 8000
 - `assets/nashalj-mark.svg` نشان اختصاصی سایت
 - `_headers` هدرهای امنیتی و کش برای میزبان‌های سازگار
 - `site.webmanifest` فراداده نصب وب‌اپ
+- `robots.txt` و `sitemap.xml` اطلاعات خزنده‌های موتور جست‌وجو
 
-## انتشار
-این پروژه به build step نیاز ندارد. برای Cloudflare Pages، مخزن GitHub را متصل و تنظیمات زیر را انتخاب کنید:
-- Framework preset: None
-- Build command: خالی
-- Build output directory: /
+## انتشار در GitHub Pages
+این پروژه به build step نیاز ندارد. در مخزن به مسیر Settings → Pages بروید و این تنظیمات را انتخاب کنید:
+- Source: Deploy from a branch
+- Branch: main
+- Folder: / (root)
+- سپس Save را بزنید.
+
+آدرس پروژه: https://sepehrirl.github.io/nashalj/
+
+نکته: آدرس فایل‌های محلی عمداً نسبی هستند تا در مسیر پروژه‌ای GitHub Pages درست بارگذاری شوند. فایل `_headers` توسط GitHub Pages اعمال نمی‌شود و مخصوص میزبان‌هایی مانند Cloudflare Pages است.
 
 ## منابع محتوایی
 - [اداره میراث فرهنگی، گردشگری و صنایع دستی کاشان — روستای نشلج](https://kashancth.ir/روستای-نشلج)
