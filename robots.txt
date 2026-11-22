@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://nashalj.site/sitemap.xml
+Sitemap: https://sepehrirl.github.io/nashalj/sitemap.xml
